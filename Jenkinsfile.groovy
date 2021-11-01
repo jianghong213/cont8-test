@@ -5,13 +5,13 @@ def registry = "xxx"
 def project = "max"
 def app_name = "java-demo"
 def image_name = "springboot-node"
-def git_address = "https://github.com/appmocca/CONT8.git"
+def git_address = "https://github.com/Crazyorchid/cont8-test"
 pipeline {
     agent any
     stages {
         stage('拉取代码'){
             steps {
-             sh 'git clone https://github.com/appmocca/CONT8.git -b max'
+             sh 'git clone https://github.com/Crazyorchid/cont8-test -b max'
             // 拉取代码
             }
         }
