@@ -22,6 +22,7 @@ pipeline {
              sh """
                 pwd
                 ls
+                cd server
                 mvn clean package -Dmaven.test.skip=true
                 # 开始编译nodejs代码  这里是vue
                 cd client && npm install
