@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('拉取代码'){
             steps {
-            cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
+            
              sh 'git clone https://github.com/Crazyorchid/cont8-test -b main'
             // 拉取代码
             }
@@ -51,6 +51,7 @@ pipeline {
                   #docker login -u ${username} -p '${password}' ${registry}
                   #docker push ${image_name}
                 """
+               cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
                 }
            } 
         }
