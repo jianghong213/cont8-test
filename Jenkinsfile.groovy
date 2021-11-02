@@ -1,8 +1,6 @@
 #!/usr/bin/env groovy
 // 镜像仓库地址需要时打开
 // 使用需要下载pipline
-import jenkins.model.*
-jenkins = Jenkins.instance
 def registry = "xxx"
 def project = "max"
 def app_name = "java-demo"
