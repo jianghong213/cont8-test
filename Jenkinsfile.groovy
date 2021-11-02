@@ -12,7 +12,7 @@ pipeline {
         stage('拉取代码'){
             steps {
             
-             git branch 'main', credentialsId: '3a38c8cc-2a3c-4b8e-b904-c23325397b2c', url: 'https://github.com/Crazyorchid/cont8-test'
+             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Crazyorchid', url: 'https://github.com/Crazyorchid/cont8-test']]])
             // 拉取代码
             }
         }
