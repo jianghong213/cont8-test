@@ -22,8 +22,6 @@ pipeline {
              sh """
                 pwd
                 ls
-                JAVA_HOME=/usr/local/jdk
-                PATH=$JAVA_HOME/bin:/usr/local/maven/bin:$PATH
                 mvn clean package -Dmaven.test.skip=true
                 # 开始编译nodejs代码  这里是vue
                 cd client && npm install
@@ -31,6 +29,8 @@ pipeline {
                 """ 
            }
         }
+               //  JAVA_HOME=/usr/local/jdk
+               //  PATH=$JAVA_HOME/bin:/usr/local/maven/bin:$PATH
 
         stage('构建镜像'){
            steps {
