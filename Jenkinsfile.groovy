@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('拉取代码'){
             steps {
-             sh 'git clone https://github.com/Crazyorchid/cont8-test -b max'
+             sh 'git clone https://github.com/Crazyorchid/cont8-test -b main'
             // 拉取代码
             }
         }
