@@ -84,5 +84,10 @@
         </plugins>
     </build>
 
+    <properties>
+        <!-- 跳过测试 -->
+        <skipTests>true</skipTests>
+    </properties>
+
 
 </project>
