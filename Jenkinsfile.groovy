@@ -53,8 +53,7 @@ pipeline {
                 }
            } 
         }
-
-        stage('部署到Docker'){
+        /* stage('部署到Docker'){
            steps {
               sh """
               REPOSITORY=${image_name}
@@ -64,5 +63,5 @@ pipeline {
               docker container run -d --name java-spring-boot-node -p 8081:80 -p 88:8080 ${image_name}
               """
             }
-        }
+        } */
     }
