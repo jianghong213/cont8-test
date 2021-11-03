@@ -48,9 +48,9 @@ pipeline {
          stage('部署到Docker'){
            steps {
               sh """
-                   docker rm java-spring-boot
+                   docker rm -f java-spring-boot
                    docker run -dit --name java-spring-boot -p 88:8088 springboot:latest
-                   docker rm node
+                   docker rm -f node
                    docker run -dit --name node -p 80:80 node:latest
                  """
             }
