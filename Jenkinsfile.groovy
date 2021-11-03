@@ -25,7 +25,8 @@ pipeline {
                 cd server
                 mvn clean package -Dmaven.test.skip=true
                 # 开始编译nodejs代码  这里是vue
-                cd ../client && npm install
+                cd ../client 
+                npm install
                 npm run build
                 """ 
            }
