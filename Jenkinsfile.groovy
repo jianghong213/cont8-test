@@ -40,7 +40,7 @@ pipeline {
         stage('构建镜像'){
            steps {
                 sh """
-                  echo '
+                 /* echo '
                     FROM  ascdc/jdk8
                     RUN echo "java -jar /apps/java.jar" >> /start.sh
                     # 启动java命令
@@ -50,6 +50,7 @@ pipeline {
                     # 复制所有文件进容器
                     CMD ["bash","-x","/start"]
                   ' > Dockerfile
+                  */
                   # 自生成dockerfile
                   docker build -t ${image_name} .
                   # 需要仓库时打开添加变量即可
