@@ -90,7 +90,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                      <configuration>
-                              <mainClass>MyApplication.App</mainClass>
+                              <mainClass>MyApplication</mainClass>
                      </configuration>
             </plugin>
         </plugins>
