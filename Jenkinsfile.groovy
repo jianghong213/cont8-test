@@ -44,7 +44,7 @@ pipeline {
                // cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
                 }
            } 
-        }
+        
          stage('部署到Docker'){
            steps {
               sh """
