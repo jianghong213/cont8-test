@@ -48,7 +48,7 @@ pipeline {
          stage('部署到Docker'){
            steps {
               sh """
-                   docker rm -f tomcat-java-demo |true
+                   docker rm java-spring-boot
                    docker run -dit --name java-spring-boot -p 88:8080 springboot:latest
                  """
             }
