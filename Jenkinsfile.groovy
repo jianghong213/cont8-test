@@ -53,5 +53,5 @@ pipeline {
               docker run -dit --name java-spring-boot -p 88:8080 springboot:latest
               """
             }
-        } */
+        } 
     }
