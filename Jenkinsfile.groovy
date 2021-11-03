@@ -28,9 +28,6 @@ pipeline {
                 cd ../client 
                 npm install
                 npm run build
-          //      npm run unit
-          //      npm run e2e
-          //      npm test
                 """ 
            }
         }
