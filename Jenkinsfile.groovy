@@ -51,7 +51,7 @@ pipeline {
                    docker rm java-spring-boot
                    docker run -dit --name java-spring-boot -p 88:8088 springboot:latest
                    docker rm node
-                   docker run -dit --name node -p 80:8080 node:latest
+                   docker run -dit --name node -p 80:80 node:latest
                  """
             }
         } 
