@@ -36,25 +36,10 @@ pipeline {
 
         stage('构建镜像'){
            steps {
-                sh """
-                 /* echo '
-                    FROM  ascdc/jdk8
-                    RUN echo "java -jar /apps/java.jar" >> /start.sh
-                    # 启动java命令
-                    RUN echo "npm start" >> /start.sh
-                    ADD target/*jar /apps/java.jar
-                    COPY ./*       /app/
-                    # 复制所有文件进容器
-                    CMD ["bash","-x","/start"]
-                  ' > Dockerfile
-                  */
-                  # 自生成dockerfile
+             sh """
                   docker build -t ${image_name} .
-                  # 需要仓库时打开添加变量即可
-                  #docker login -u ${username} -p '${password}' ${registry}
-                  #docker push ${image_name}
                 """
-               cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
+               // cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
                 }
            } 
         }
