@@ -4,7 +4,8 @@
 def registry = "xxx"
 def project = "max"
 def app_name = "java-demo"
-def image_name = "springboot-node"
+def image_name_java = "springboot"
+def image_name_node = "node"
 def git_address = "https://github.com/Crazyorchid/cont8-test"
 pipeline {
     agent any
@@ -37,7 +38,8 @@ pipeline {
         stage('构建镜像'){
            steps {
              sh """
-                  docker build -t ${image_name} .
+                  docker build -t ${image_name_java} .
+                  docker build -f Dockerfile-node -t ${image_name_node} .
                 """
                // cleanWs(patterns: [[pattern: 'nope_modules', type: 'EXCLUDE']])
                 }
